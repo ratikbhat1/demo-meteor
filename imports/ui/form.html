@@ -1,0 +1,17 @@
+<body>
+	<form class="submitForm">
+		<label for="name">Register Name :</label>
+		<input type="text" name="name">
+		<input type="submit" name="submit" value="submit">
+	</form>
+	<h2>List of Registered Users:</h2>
+	<ul>
+      {{#each users}}
+        {{> user}}
+      {{/each}}
+    </ul>
+</body>
+
+<template name="user">
+  <li>{{text}}</li>
+</template>
